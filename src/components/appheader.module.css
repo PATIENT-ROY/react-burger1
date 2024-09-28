@@ -1,0 +1,104 @@
+.navbar {
+  background-color: #1C1C21;
+  box-shadow: 0px 0px 1px 0px #0000000A;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  height: 56px;
+  padding: 16px;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 383px;
+  height: 56px;
+  opacity: 0px;
+}
+
+.navigation,
+.profile,
+.logo {
+  opacity: 1;
+}
+
+/* Tablet and smaller screens */
+@media (max-width: 992px) {
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .content {
+    flex-direction: row;
+  }
+
+  .navigation,
+  .profile,
+  .logo {
+    flex: 1;
+    text-align: center;
+  }
+
+  .navigation,
+  .profile {
+    gap: 4px;
+  }
+
+  .navigation svg,
+  .profile svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .navigation span,
+  .profile span {
+    display: none;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 576px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  .content {
+    flex-direction: column;
+  }
+
+  .navigation,
+  .profile,
+  .logo {
+    width: 100%;
+    text-align: center;
+  }
+
+  .navigation,
+  .profile {
+    gap: 8px;
+  }
+
+  .navigation svg,
+  .profile svg {
+    width: 32px;
+    height: 32px;
+  }
+
+  .navigation span,
+  .profile span {
+    display: block;
+    font-size: 12px;
+  }
+}
